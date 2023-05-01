@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="create_currency_table" author="user">
+        <createTable tableName="currency">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" unique="true" nullable="false"/>
+            </column>
+            <column name="ask_name" type="VARCHAR(255)"/>
+            <column name="bid_name" type="INTEGER"/>
+            <column name="rate_buy" type="VARCHAR(255)"/>
+            <column name="rate_sell" type="DOUBLE PRECISION"/>
+            <column name="date" type="TIMESTAMP" defaultValueDate="NOW()"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
